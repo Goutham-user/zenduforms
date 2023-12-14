@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="row">
+        <h2 class="heading2">Submissions</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-9">
+            <div class="row">
+                <div class="col-4">
+                    <div class="search mr-16">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" class="zendu-placeholder body-p-3" placeholder="Search...">
+                    </div>
+                </div>
+
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-4">
+                            <select name="selectForm" id="selectForm">
+                                <option value="selectfrom">Select From</option>
+                                <option value="form2">Form 2</option>
+                                <option value="form3">Form 3</option>
+                                <option value="form4">Form 4</option>
+
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <select name="selectStatus" id="selectStatus">
+                                <option value="selectStatus">Select Status</option>
+                                <option value="selectStatu2">Select Status 2</option>
+                                <option value="selectStatus3">Select Status 3</option>
+                                <option value="selectStatus4">Select Status 4</option>
+
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <input type="date" class="date-picker" name="datePicker" id="datePicker">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-2 pl-70">
+            <div class="wrapper">
+                <div class="custom-input">
+                    <input type="radio" checked id="map" name="mapList">
+                    <label for="map">Map</label>
+                </div>
+                <div class="custom-input">
+                    <input type="radio" id="list" name="mapList">
+                    <label for="list">List</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-1">
+            <button class="btn btn-link pt-10 export">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                Export
+            </button>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div class="container">
+    <div class="row mt-20">
+        <div class="col-5">
+
+            <div class="marker-container" *ngFor="let marker of markers">
+                <div class="marker-location heading-5">{{ marker.location }}</div>
+                <span class="light-text body-p2-medium">From: </span> <span class="marker-email body-p-3"> {{ marker.from}}</span><br>
+                <span class="light-text body-p2-medium">To: </span> <span class="marker-email body-p-3"> {{ marker.to}}</span><br>
+                <span class="light-text body-p2-medium">Due Date: </span> <span class="dueDate body-p2-medium"> {{ marker.dueDate}}</span><br>
+
+            </div>
+        </div>
+        <div class="col-7 p-0">
+            <app-here-map></app-here-map>
+        </div>
+    </div>
+</div>
