@@ -43,6 +43,15 @@ body {
     line-height: 140%; 
 }
 
+/* Body/P4_Medium */
+.body_p4_medium{
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 130%; /* 18.2px */
+}
+
 .nav-header{
     color: var(--color-white, #FFF);
     font-family: Roboto;
@@ -144,6 +153,13 @@ select, .date-picker{
     color: #FFFFFF;
 }
 
+.btn-link{
+    text-decoration: none;
+    :hover{
+        text-decoration: none;
+    }
+}
+
 
 .button-text{
     color: var(--White, #FFF);
@@ -174,6 +190,54 @@ select, .date-picker{
     border-radius: 4px;
     border: 1px solid var(--Color-Black-Borders, #B8B9BC);
     background: var(--Color-White, #FFF);
+}
+
+.status-possitive{
+    display: inline-flex;
+    padding: 4px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--Color-Success, #53D86A);
+    background: var(--Color-Success-Light, #D7E5DA);
+}
+
+.status-negative{
+    display: inline-flex;
+    padding: 4px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--Color-Error, #FF3D00);
+    background: var(--Color-Error-Light, rgba(255, 61, 0, 0.10));
+}
+
+.status-disabled{
+    display: inline-flex;
+    padding: 4px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--Color-Black-Borders, #B8B9BC);
+    background: var(--Color-Black-Table, #ECECED);
+}
+
+.status-possitive-text{
+    color: var(--Color-Success, #53D86A);
+    text-align: center;
+}
+
+.status-negative-text{
+    color: var(--Color-Error, #FF3D00);
+    text-align: center;
+}
+
+.status-disabled-text{
+    color: var(--Color-Black-Borders, #B8B9BC);
+    text-align: center;
 }
 
 .marker-location{
@@ -229,4 +293,8 @@ select, .date-picker{
 .align-export{
     padding: 0px;
     padding-top: 6px;
+}
+
+.pl-20{
+    padding-left: 32px;
 }
